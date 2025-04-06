@@ -2,10 +2,11 @@ import BookDetails from "@/app/ui/BookDetails";
 import { fetchBooks } from "@/app/lib/data";
 import { BookType } from "@/app/lib/types";
 
+type SearchParams = Promise<{ category: string | undefined }>;
 export default async function Page({
   searchParams,
 }: {
-  searchParams: { category: string };
+  searchParams: SearchParams;
 }) {
   const query = await searchParams;
   if (!query?.category) return;

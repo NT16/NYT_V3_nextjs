@@ -1,6 +1,6 @@
 import Image from "next/image";
-
-export default async function BookDetails({ book }: { book: any }) {
+import { BookType } from "@/app/lib/types";
+export default async function BookDetails({ book }: { book: BookType }) {
   return (
     <div className="w-[250px] h-auto m-2 p-3 rounded-md bg-emerald-50 relative">
       <div className="flex flex-col grow">

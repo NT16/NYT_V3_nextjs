@@ -1,11 +1,17 @@
 import BookDetails from "@/app/ui/BookDetails";
 import { fetchBooks } from "@/app/lib/data";
 
-export default async function Page({ searchParams }: any) {
-  const { category } = await searchParams;
-  if (!category) return;
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: { category: string };
+}) {
+  const query = await searchParams;
+  if (!query?.category) return;
 
-  const { results: books } = await fetchBooks(category);
+  const response = await fetchBooks(query?.category);
+  if (!response || !response.results) return;
+  const books = response.results;
 
   return (
     <div className="mx-auto">

@@ -1,4 +1,4 @@
-import { ListResponseType } from "@/app/lib/types";
+import { ListResponseType, BookResponseType } from "@/app/lib/types";
 
 
 export async function fetchLists():Promise<ListResponseType | undefined> {
@@ -22,7 +22,7 @@ export async function fetchLists():Promise<ListResponseType | undefined> {
     }
 }
 
-export async function fetchBooks(categoryName : string):Promise<any | undefined>{
+export async function fetchBooks(categoryName : string):Promise<BookResponseType | undefined>{
     const url = process.env.CATEGORY_A_API + categoryName + process.env.CATEGORY_B_API || "";
     
     try {

@@ -9,7 +9,7 @@ export default function Page() {
         About
       </h2>
       <div className="mx-auto flex mb-8 justify-center">
-        Page built with{" "}
+        Page built with &nbsp;
         <div className="mx-4">
           <ul className="font-mono text-xs/6 font-medium">
             <li>Next.js 13.4</li>
@@ -20,14 +20,14 @@ export default function Page() {
       </div>
 
       <div className="w-[500px] text-wrap mx-auto">
-        Special thanks to{" "}
+        Special thanks to &nbsp;
         <Link
           href="https://css-loaders.com"
           className="font-mono text-xs/6 font-medium underline text-emerald-600">
           "CSS Loaders"
-        </Link>{" "}
-        for maintaining an amazing collection of loaders. Loader used here is
-        from this site.
+        </Link>
+        &nbsp; for maintaining an amazing collection of loaders. Loader used
+        here is from this site.
       </div>
       <FloatingButton />
     </div>

@@ -24,7 +24,7 @@ export default function Page() {
         <Link
           href="https://css-loaders.com"
           className="font-mono text-xs/6 font-medium underline text-emerald-600">
-          "CSS Loaders"
+          CSS Loaders
         </Link>
         &nbsp; for maintaining an amazing collection of loaders. Loader used
         here is from this site.

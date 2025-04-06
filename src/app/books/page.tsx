@@ -1,5 +1,6 @@
 import BookDetails from "@/app/ui/BookDetails";
 import { fetchBooks } from "@/app/lib/data";
+import { BookType } from "@/app/lib/types";
 
 export default async function Page({
   searchParams,
@@ -19,7 +20,7 @@ export default async function Page({
         {books.list_name}
       </h2>
       <div className="flex flex-wrap gap-4 justify-center">
-        {books.books.map((book: any) => (
+        {books.books.map((book: BookType) => (
           <BookDetails key={book.title} book={book} />
         ))}
       </div>

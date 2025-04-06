@@ -5,7 +5,10 @@ export default async function CategoryBooks({
 }: {
   category: string;
 }) {
-  const { results: books } = await fetchBooks(category);
+  const response = await fetchBooks(category);
+
+  if (!response || !response.results) return;
+  const books = response.results;
 
   return (
     <div>
